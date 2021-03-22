@@ -31,8 +31,14 @@
                                
                 <ion-item>
                     <ion-icon item-left name="pricetag"></ion-icon>
-                    <h3>Propsed Price</h3>
+                    <h3>Asking Price</h3>
                     <ion-note item-right>{{property.priceFormatted}}</ion-note>
+                </ion-item>
+       
+                <ion-item>
+                    <ion-icon item-left name="pricetag"></ion-icon>
+                    <h3>Propsed Price</h3>
+                    <ion-note item-right><input type="number" id="pprice" name="Propsed Price"><button onclick="myFunction()">Try it</button><br><br></ion-note></ion-note>
                 </ion-item>
                 
                 <button ion-item (click)="showBroker($event, property.broker)">
