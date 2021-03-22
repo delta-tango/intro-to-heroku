@@ -13,6 +13,7 @@ let prettifyProperty = (property) => {
         city: property.city__c,
         state: property.state__c,
         price: property.price__c,
+        propsedprice: property.propsed_price__c,
         priceFormatted: "$" + property.price__c.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
         beds: property.beds__c,
         baths: property.baths__c,
@@ -61,6 +62,8 @@ export class PropertyService {
         return this.http.get('/favorite').map(response => response.json().map(prettifyFavorite));
     }
 
+    
+    
     favorite(property) {
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
