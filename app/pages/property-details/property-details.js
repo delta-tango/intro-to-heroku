@@ -23,6 +23,12 @@ export class PropertyDetailsPage {
         this.propertyService.findById(this.property.id).subscribe(property => this.property = property);
     }
 
+    addpropsedprice()
+    {
+        document.getElementById("pprice").value = "property.propsed_price__c";
+    }
+    
+    
     favorite(event, property) {
 
         this.propertyService.favorite(property).subscribe(() => {
@@ -36,6 +42,9 @@ export class PropertyDetailsPage {
 
     }
 
+    function addproposedprice() {
+    document.getElementById("pprice").value = "submit";}
+    
     like(event, property) {
         // Simulated in this sample. See "Favorite" for similar functionality.
         this.property.likes++;
